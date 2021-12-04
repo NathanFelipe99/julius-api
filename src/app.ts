@@ -4,6 +4,9 @@ import * as cors from 'cors';
 import * as logger from 'morgan';
 
 import { connectDb } from './config/db';
+import { routerUsuario } from './routes/usuario';
+import { send } from 'process';
+
 /**
  * Cria a aplicação
  */
@@ -28,3 +31,9 @@ app.use(logger('dev'));
  * Conecta no db
  */
 connectDb();
+
+/**
+ * Configuração de rotas
+ */
+app.use('/usuario', routerUsuario);
+app.use('/', (req, res) => res.send('API do AppJulius'));
