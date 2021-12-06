@@ -7,7 +7,7 @@ services:
             POSTGRES_USER: postgres
             POSTGRES_DB: julius
         volumes:
-            - /Users/Acer/AppData/Local/Postgres/var/lib/postgresql/data
+            - ./pgdata:/var/lib/postgresql/data
         ports:
             - "5432:5432"
     app:
