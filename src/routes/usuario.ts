@@ -44,7 +44,7 @@ routerUsuario.get('/', async (req, res) => {
 });
 
 /**Serviço para listar os lançamentos por usuário */
-routerUsuario.get('/lancamentos:idUsuario', async (req, res) => {
+routerUsuario.get('/lancamentos/:idUsuario', async (req, res) => {
   const idUsuario = parseInt(req.params.idUsuario);
   const lancamentos = await usuarioCtrl.recuperarPorUsuario(idUsuario);
   res.json(lancamentos);
