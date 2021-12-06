@@ -1,5 +1,6 @@
-import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany} from "typeorm";
 import { Contains, contains, IsEmail, IsNotEmpty, Length, length, Max, MaxLength, MIN, MinLength } from 'class-validator';
+import { Lancamento } from "./Lancamento";
 
 @Entity()
 export class Usuario {
@@ -29,4 +30,7 @@ export class Usuario {
 
     @UpdateDateColumn({name: 'updatedAt'})
     updatedAt: Date;
+
+    @OneToMany(() => Lancamento, lancamento => lancamento.usuario)
+    lancamentos: Lancamento[];
 }

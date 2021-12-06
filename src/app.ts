@@ -5,6 +5,7 @@ import * as logger from 'morgan';
 
 import { connectDb } from './config/db';
 import { routerUsuario } from './routes/usuario';
+import { routerLancamento } from './routes/lancamento';
 import { send } from 'process';
 
 /**
@@ -36,4 +37,5 @@ connectDb();
  * Configuração de rotas
  */
 app.use('/usuario', routerUsuario);
+app.use('/lancamento', routerLancamento);
 app.use('/', (req, res) => res.send('API do AppJulius'));
