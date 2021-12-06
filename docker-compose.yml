@@ -10,6 +10,15 @@ services:
             - /Users/Acer/AppData/Local/Postgres/var/lib/postgresql/data
         ports:
             - "5432:5432"
+    app:
+        container_name: julius-api
+        restart: always
+        build: .
+        ports: 
+            - "3000:3000"
+        depends_on: 
+            - db
+            
   
   
 

@@ -4,8 +4,8 @@ import * as cors from 'cors';
 import * as logger from 'morgan';
 
 import { connectDb } from './config/db';
-import { routerUsuario } from './routes/usuario';
-import { routerLancamento } from './routes/lancamento';
+import { routerUsuario } from './route/usuario';
+import { routerLancamento } from './route/lancamento';
 import { send } from 'process';
 
 /**
