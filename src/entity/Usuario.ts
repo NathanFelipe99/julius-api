@@ -1,5 +1,5 @@
 import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany} from "typeorm";
-import { Contains, contains, IsEmail, IsNotEmpty, Length, length, Max, MaxLength, MIN, MinLength } from 'class-validator';
+import { Contains, IsEmail, IsNotEmpty, Length, length, Max, MaxLength, MIN, MinLength } from 'class-validator';
 import { Lancamento } from "./Lancamento";
 
 @Entity()

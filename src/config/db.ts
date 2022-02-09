@@ -1,4 +1,3 @@
-import { SIGINT } from 'constants';
 import { createConnection } from 'typeorm';
 
 export const connectDb = async () => {
